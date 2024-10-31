@@ -1,0 +1,4 @@
+site_name: Kanashimo API Docs
+site_url: https://docs.kanashimo.ovh
+theme:
+  name: material
