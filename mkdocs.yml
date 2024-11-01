@@ -1,4 +1,4 @@
 site_name: Cubecopia API Docs
-site_url: docs.kanashimo.ovh
+site_url: https://docs.kanashimo.ovh/
 theme:
   name: material
