@@ -12,11 +12,12 @@
 }
 
 ### Response
+``json
 {
     "message": "Purchase completed successfully", // (String) Beautiful message
     "realised": is_realised_in_minecraft,         // (Boolean) Information if the order was realised in Minecraft
     "status": "success" || "forbidden" || "fail"  // (String) Status of the operation
-}
+}``
 
 ### Status
 - "success": Everything went smoothly, proceed to realise order.
