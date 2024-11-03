@@ -4,12 +4,14 @@
 **Endpoint:** `/api/purchase`
 
 ### Request Body
+```json
 {
     "player": "playername",  // (String) Player name
     "pack": packid,          // (Int) Pack ID
     "order": orderid,        // (Int) Order ID
     "secret": "secret"       // (String) Secret
 }
+```
 
 ### Response
 ```json
@@ -31,6 +33,8 @@
 **Endpoint:** `/api/health`
 
 ### Response
+```json
 {
     "healthy": true // (Boolean) Always true. If no response that means something is totally wrong. Maybe the server is not working?
 }
+```
