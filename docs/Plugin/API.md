@@ -1,34 +1,34 @@
-# Purchase - POST
-/api/purchase
+# API Documentation
 
-```json
+## Purchase - POST
+**Endpoint:** `/api/purchase`
+
+### Request Body
 {
-    "player": playername, (String)
-    "pack": packid, (Int)
-    "order": orderid, (Int)
-    "secret": secret (String)
-}```
+    "player": "playername",  // (String) Player name
+    "pack": packid,          // (Int) Pack ID
+    "order": orderid,        // (Int) Order ID
+    "secret": "secret"       // (String) Secret
+}
 
-Returns
-
-```json
+### Response
 {
-    "message": "Zakup zakończony sukcesem", (String) "Beautiful message"
-    "realised": is_realised_in_minecraft, (Boolean)
-    "status": "success"||"forbidden"||"fail" (String)
-}```
+    "message": "Purchase completed successfully", // (String) Beautiful message
+    "realised": is_realised_in_minecraft,         // (Boolean) Information if the order was realised in Minecraft
+    "status": "success" || "forbidden" || "fail"  // (String) Status of the operation
+}
 
-"status" has three possible values:
-- "succes" Everything went smoothly, proceed to realize order.
-- "fail" Something with values is wrong in input JSON. Possible error in JSON parsing. Not proceeded to realize order.
-- "forbidden" You provided wrong secret. Not proceeded to realize order.
+### Status
+- "success": Everything went smoothly, proceed to realise order.
+- "fail": Something is wrong with the values in JSON. Possible error in JSON parsing. Order not proceeded.
+- "forbidden": You provided wrong secret. Order not proceeded.
 
-# Health Check - GET
-/api/health
+---
 
-Returns
+## Health Check - GET
+**Endpoint:** `/api/health`
 
-```json
+### Response
 {
-    "healthy": true (Boolean) Always true. If no response that means something is totally wrong. Mayby server is not working?
-}```
+    "healthy": true // (Boolean) Always true. If no response that means something is totally wrong. Maybe the server is not working?
+}
